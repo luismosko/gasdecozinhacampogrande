@@ -1,0 +1,505 @@
+/* ========================================
+   GÁS CAMPO GRANDE - ESTILO PRINCIPAL
+   Site: gasdecozinhacampogrande.com.br
+   ======================================== */
+
+/* === RESET E VARIÁVEIS === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-primaria: #FF6B00;
+    --cor-secundaria: #0066CC;
+    --cor-texto: #333333;
+    --cor-texto-claro: #666666;
+    --cor-fundo: #FFFFFF;
+    --cor-fundo-claro: #F8F9FA;
+    --cor-destaque: #FFD700;
+    --fonte-principal: 'Roboto', 'Segoe UI', Arial, sans-serif;
+    --fonte-titulo: 'Montserrat', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    background-color: var(--cor-fundo);
+}
+
+/* === TIPOGRAFIA === */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fonte-titulo);
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+p { margin-bottom: 1rem; }
+
+a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--cor-secundaria);
+}
+
+/* === CONTAINER === */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* === HEADER === */
+header {
+    background-color: var(--cor-fundo);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-top {
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 10px 0;
+    font-size: 0.9rem;
+}
+
+.header-top .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header-top a {
+    color: white;
+    margin-left: 20px;
+}
+
+.header-main {
+    padding: 15px 0;
+}
+
+.header-main .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+/* === NAVEGAÇÃO === */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: var(--cor-texto);
+    font-weight: 500;
+    padding: 10px 0;
+    position: relative;
+}
+
+nav a:hover {
+    color: var(--cor-primaria);
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--cor-primaria);
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--cor-primaria);
+}
+
+/* === HERO SECTION === */
+.hero {
+    background: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-secundaria) 100%);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* === BOTÕES === */
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto);
+}
+
+.btn-primary:hover {
+    background-color: #FFC700;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128C7E;
+    color: white;
+}
+
+/* === PRODUTOS === */
+.produtos {
+    padding: 80px 0;
+    background-color: var(--cor-fundo-claro);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: var(--cor-texto);
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: var(--cor-texto-claro);
+    font-size: 1.1rem;
+}
+
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.produto-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.produto-card img {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.produto-card h3 {
+    color: var(--cor-primaria);
+    margin-bottom: 15px;
+}
+
+.produto-card p {
+    color: var(--cor-texto-claro);
+    margin-bottom: 20px;
+}
+
+/* === VANTAGENS === */
+.vantagens {
+    padding: 80px 0;
+}
+
+.vantagens-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.vantagem-item {
+    text-align: center;
+    padding: 20px;
+}
+
+.vantagem-icon {
+    font-size: 3rem;
+    color: var(--cor-primaria);
+    margin-bottom: 20px;
+}
+
+.vantagem-item h3 {
+    color: var(--cor-texto);
+    margin-bottom: 10px;
+}
+
+.vantagem-item p {
+    color: var(--cor-texto-claro);
+}
+
+/* === BAIRROS === */
+.bairros {
+    padding: 80px 0;
+    background-color: var(--cor-fundo-claro);
+}
+
+.bairros-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.bairro-link {
+    background-color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.bairro-link:hover {
+    border-color: var(--cor-primaria);
+    background-color: var(--cor-primaria);
+    color: white;
+    transform: scale(1.05);
+}
+
+/* === CTA SECTION === */
+.cta-section {
+    background: linear-gradient(135deg, var(--cor-secundaria) 0%, var(--cor-primaria) 100%);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* === FOOTER === */
+footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section h3 {
+    color: var(--cor-primaria);
+    margin-bottom: 20px;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #ccc;
+}
+
+.footer-section a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    color: #999;
+}
+
+/* === PÁGINA INTERNA === */
+.page-header {
+    background: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-secundaria) 100%);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.breadcrumb {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.breadcrumb a {
+    color: white;
+    opacity: 0.9;
+}
+
+.breadcrumb span {
+    margin: 0 10px;
+}
+
+.page-content {
+    padding: 60px 0;
+}
+
+.content-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.content-wrapper h2 {
+    color: var(--cor-primaria);
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.content-wrapper h3 {
+    color: var(--cor-secundaria);
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.cta-box {
+    background-color: var(--cor-fundo-claro);
+    border-left: 4px solid var(--cor-primaria);
+    padding: 30px;
+    margin: 40px 0;
+    border-radius: 8px;
+}
+
+/* === RESPONSIVO === */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        padding: 20px;
+    }
+    
+    nav ul.active {
+        display: flex;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+    
+    .produtos-grid,
+    .vantagens-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .bairros-lista {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.7rem; }
+    h3 { font-size: 1.3rem; }
+}
+
+@media (max-width: 480px) {
+    .header-top .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .header-top a {
+        margin: 5px 0;
+    }
+    
+    .btn {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+}
