@@ -3,122 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Contato - Gás Campo Grande | Gás de Cozinha em Campo Grande MS</title>
-    <meta name="description" content="Entre em contato com a Gás Campo Grande. Atendimento via WhatsApp (67) 99131-0665. Entrega de gás de cozinha em todos os bairros.">
-    
-    <link rel="icon" type="image/png" href="logo.png">
+    <title>Contato | Gás Campo Grande | (67) 99131-0665</title>
+    <meta name="description" content="Entre em contato com a Gás Campo Grande. WhatsApp, telefone ou formulário. Atendemos todos os bairros de Campo Grande - MS. (67) 99131-0665">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
     <header>
         <div class="header-top">
             <div class="container">
-                <div>📍 Rua Olímpio Klafke, 635 - Mata do Jacinto, Campo Grande - MS</div>
-                <div>
-                    📞 <a href="tel:+5567991310665">(67) 99131-0665</a>
-                    💬 <a href="https://wa.me/5567991310665" target="_blank">WhatsApp</a>
+                <div class="contact-info">
+                    <a href="tel:+5567991310665">📞 (67) 99131-0665</a>
+                    <span>📍 Rua Olímpio Klafke, 635 - Mata do Jacinto</span>
                 </div>
+                <div><span>⏰ Aberto: Seg-Dom 7h às 22h</span></div>
             </div>
         </div>
-        
         <div class="header-main">
             <div class="container">
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="logo.png" alt="Gás Campo Grande">
-                    </a>
-                </div>
-                
+                <div class="logo"><a href="index.html"><img src="logo.png" alt="Gás Campo Grande"></a></div>
+                <button class="mobile-menu-toggle">☰</button>
                 <nav>
-                    <button class="menu-toggle">☰</button>
                     <ul>
                         <li><a href="index.html">Início</a></li>
-                        <li><a href="gas-de-cozinha-em-campo-grande-ms.html">Gás de Cozinha</a></li>
-                        <li><a href="pedir-gas-em-campo-grande.html">Pedir Gás</a></li>
-                        <li><a href="botijao-p13-em-campo-grande.html">Botijão P13</a></li>
+                        <li><a href="gas-de-cozinha-em-campo-grande-ms.html">Sobre</a></li>
+                        <li><a href="index.html#produtos">Produtos</a></li>
+                        <li><a href="index.html#bairros">Bairros</a></li>
                         <li><a href="contato.html">Contato</a></li>
+                        <li><a href="https://wa.me/5567991310665" class="btn-whatsapp" target="_blank">💬 WhatsApp</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
 
-    <div class="page-header">
+    <section class="hero">
         <div class="container">
             <h1>Entre em Contato</h1>
-            <div class="breadcrumb">
-                <a href="index.html">Início</a> <span>›</span> Contato
+            <p>Estamos prontos para atender você em Campo Grande - MS</p>
+        </div>
+    </section>
+
+    <section style="padding: 80px 0;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; max-width: 1100px; margin: 0 auto;">
+                <!-- Formulário -->
+                <div>
+                    <h2 style="font-size: 2rem; margin-bottom: 30px;">Faça Seu Pedido</h2>
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 30px;">
+                        Preencha o formulário abaixo e entraremos em contato rapidamente pelo WhatsApp:
+                    </p>
+                    
+                    <form id="contact-form" style="display: grid; gap: 20px;">
+                        <div>
+                            <label for="nome" style="display: block; font-weight: 600; margin-bottom: 8px;">Nome Completo *</label>
+                            <input type="text" 
+                                   id="nome" 
+                                   name="nome" 
+                                   required 
+                                   style="width: 100%; padding: 15px; border: 2px solid var(--border-color); border-radius: 8px; font-size: 1rem;">
+                        </div>
+                        
+                        <div>
+                            <label for="telefone" style="display: block; font-weight: 600; margin-bottom: 8px;">Telefone/WhatsApp *</label>
+                            <input type="tel" 
+                                   id="telefone" 
+                                   name="telefone" 
+                                   required 
+                                   placeholder="(67) 99999-9999"
+                                   style="width: 100%; padding: 15px; border: 2px solid var(--border-color); border-radius: 8px; font-size: 1rem;">
+                        </div>
+                        
+                        <div>
+                            <label for="bairro" style="display: block; font-weight: 600; margin-bottom: 8px;">Bairro *</label>
+                            <input type="text" 
+                                   id="bairro" 
+                                   name="bairro" 
+                                   required 
+                                   placeholder="Ex: Centro, Aero Rancho, Tiradentes"
+                                   style="width: 100%; padding: 15px; border: 2px solid var(--border-color); border-radius: 8px; font-size: 1rem;">
+                        </div>
+                        
+                        <div>
+                            <label for="produto" style="display: block; font-weight: 600; margin-bottom: 8px;">Produto</label>
+                            <select id="produto" 
+                                    name="produto"
+                                    style="width: 100%; padding: 15px; border: 2px solid var(--border-color); border-radius: 8px; font-size: 1rem;">
+                                <option value="P13">Botijão P13 (13kg)</option>
+                                <option value="P20">Gás P20 (20kg)</option>
+                                <option value="P45">Gás P45 (45kg)</option>
+                                <option value="Agua">Galão de Água</option>
+                                <option value="Outro">Outro</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="mensagem" style="display: block; font-weight: 600; margin-bottom: 8px;">Mensagem</label>
+                            <textarea id="mensagem" 
+                                      name="mensagem" 
+                                      rows="4"
+                                      placeholder="Conte-nos mais sobre seu pedido..."
+                                      style="width: 100%; padding: 15px; border: 2px solid var(--border-color); border-radius: 8px; font-size: 1rem; resize: vertical;"></textarea>
+                        </div>
+                        
+                        <button type="submit" 
+                                class="btn btn-primary" 
+                                style="width: 100%; justify-content: center; font-size: 1.1rem; padding: 18px;">
+                            💬 Enviar pelo WhatsApp
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Informações de Contato -->
+                <div>
+                    <h2 style="font-size: 2rem; margin-bottom: 30px;">Outras Formas de Contato</h2>
+                    
+                    <div style="display: grid; gap: 25px; margin-bottom: 40px;">
+                        <div style="background: var(--light-gray); padding: 30px; border-radius: 15px;">
+                            <h3 style="font-size: 1.5rem; color: var(--primary-color); margin-bottom: 15px;">📱 WhatsApp</h3>
+                            <p style="font-size: 1.3rem; font-weight: 600; margin-bottom: 10px;">(67) 99131-0665</p>
+                            <p style="margin-bottom: 20px;">A forma mais rápida de fazer seu pedido!</p>
+                            <a href="https://wa.me/5567991310665?text=Olá! Gostaria de pedir gás de cozinha." 
+                               class="btn btn-primary" 
+                               target="_blank"
+                               style="display: inline-block;">
+                                Abrir WhatsApp
+                            </a>
+                        </div>
+                        
+                        <div style="background: var(--light-gray); padding: 30px; border-radius: 15px;">
+                            <h3 style="font-size: 1.5rem; color: var(--secondary-color); margin-bottom: 15px;">📞 Telefone</h3>
+                            <p style="font-size: 1.3rem; font-weight: 600; margin-bottom: 10px;"><a href="tel:+5567991310665" style="color: var(--text-color);">(67) 99131-0665</a></p>
+                            <p>Atendimento: Segunda a Domingo<br>Das 7h às 22h</p>
+                        </div>
+                        
+                        <div style="background: var(--light-gray); padding: 30px; border-radius: 15px;">
+                            <h3 style="font-size: 1.5rem; color: var(--success-color); margin-bottom: 15px;">📍 Endereço</h3>
+                            <p style="font-size: 1.1rem; line-height: 1.8;">
+                                <strong>Rua Olímpio Klafke, 635</strong><br>
+                                Bairro Mata do Jacinto<br>
+                                Campo Grande - MS
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; padding: 30px; border-radius: 15px; text-align: center;">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 15px;">⏰ Horário de Funcionamento</h3>
+                        <p style="font-size: 1.2rem; font-weight: 600;">Segunda a Domingo</p>
+                        <p style="font-size: 1.4rem; font-weight: 700; margin: 10px 0;">7h às 22h</p>
+                        <p style="font-size: 0.95rem; opacity: 0.9;">Entregas em todos os bairros de Campo Grande</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <section class="page-content">
+    <!-- Mapa (Placeholder) -->
+    <section style="padding: 80px 0; background: var(--light-gray);">
         <div class="container">
-            <div class="content-wrapper">
-                
-                <h2>Peça Seu Gás de Cozinha Agora</h2>
-                <p>Atendemos você de forma rápida e prática pelo WhatsApp. Faça seu pedido e receba seu gás de cozinha em casa com segurança!</p>
-                
-                <div class="cta-box">
-                    <h3>📱 Atendimento pelo WhatsApp</h3>
-                    <p>Nosso time está pronto para atender você!</p>
-                    <a href="https://wa.me/5567991310665?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20de%20gás%20de%20cozinha." class="btn btn-whatsapp" target="_blank">
-                        💬 Chamar no WhatsApp: (67) 99131-0665
-                    </a>
+            <h2 style="font-size: 2rem; text-align: center; margin-bottom: 40px;">Nossa Localização</h2>
+            <div style="max-width: 900px; margin: 0 auto; background: white; padding: 40px; border-radius: 15px; box-shadow: var(--shadow);">
+                <div style="background: #e9ecef; height: 400px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #6c757d;">
+                    <div style="text-align: center;">
+                        <p style="font-size: 1.2rem; margin-bottom: 15px;">🗺️ Mapa Interativo</p>
+                        <p>Rua Olímpio Klafke, 635 - Mata do Jacinto</p>
+                        <p>Campo Grande - MS</p>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Perguntas Frequentes -->
+    <section style="padding: 80px 0;">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <h2 style="font-size: 2rem; text-align: center; margin-bottom: 50px;">Perguntas Frequentes</h2>
                 
-                <h2>Formulário de Contato</h2>
-                <p>Preencha o formulário abaixo e entraremos em contato via WhatsApp:</p>
-                
-                <form id="form-contato" style="max-width: 600px; margin: 30px 0;">
-                    <div style="margin-bottom: 20px;">
-                        <label for="nome" style="display: block; margin-bottom: 5px; font-weight: 600;">Nome Completo *</label>
-                        <input type="text" id="nome" name="nome" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem;">
+                <div style="display: grid; gap: 25px;">
+                    <div style="background: var(--light-gray); padding: 25px; border-radius: 10px;">
+                        <h3 style="font-size: 1.3rem; color: var(--primary-color); margin-bottom: 10px;">❓ Qual o prazo de entrega?</h3>
+                        <p style="line-height: 1.8;">Depende do bairro. Em muitas regiões de Campo Grande conseguimos entregar em até 1 hora. Consulte o prazo para seu bairro no momento do pedido.</p>
                     </div>
                     
-                    <div style="margin-bottom: 20px;">
-                        <label for="telefone" style="display: block; margin-bottom: 5px; font-weight: 600;">Telefone / WhatsApp *</label>
-                        <input type="tel" id="telefone" name="telefone" required placeholder="(67) 99999-9999" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem;">
+                    <div style="background: var(--light-gray); padding: 25px; border-radius: 10px;">
+                        <h3 style="font-size: 1.3rem; color: var(--primary-color); margin-bottom: 10px;">❓ Quais formas de pagamento aceitam?</h3>
+                        <p style="line-height: 1.8;">Aceitamos dinheiro, PIX, cartões de débito e crédito. Informe sua preferência no momento do pedido.</p>
                     </div>
                     
-                    <div style="margin-bottom: 20px;">
-                        <label for="bairro" style="display: block; margin-bottom: 5px; font-weight: 600;">Bairro *</label>
-                        <input type="text" id="bairro" name="bairro" required placeholder="Ex: Centro, Aero Rancho..." style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem;">
+                    <div style="background: var(--light-gray); padding: 25px; border-radius: 10px;">
+                        <h3 style="font-size: 1.3rem; color: var(--primary-color); margin-bottom: 10px;">❓ Vocês cobram taxa de entrega?</h3>
+                        <p style="line-height: 1.8;">Consulte as condições de entrega para seu bairro no momento do pedido. Em muitos casos a entrega é gratuita.</p>
                     </div>
                     
-                    <div style="margin-bottom: 20px;">
-                        <label for="mensagem" style="display: block; margin-bottom: 5px; font-weight: 600;">Mensagem</label>
-                        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite seu pedido ou dúvida..." style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; resize: vertical;"></textarea>
+                    <div style="background: var(--light-gray); padding: 25px; border-radius: 10px;">
+                        <h3 style="font-size: 1.3rem; color: var(--primary-color); margin-bottom: 10px;">❓ Posso agendar a entrega?</h3>
+                        <p style="line-height: 1.8;">Sim! Se preferir receber em um horário específico, basta informar no momento do pedido.</p>
                     </div>
                     
-                    <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
-                </form>
-                
-                <h2>Nosso Endereço</h2>
-                <div style="background: #f8f9fa; padding: 25px; border-radius: 8px; margin: 30px 0;">
-                    <p style="margin: 0;"><strong>Gás Campo Grande</strong></p>
-                    <p style="margin: 10px 0 0 0;">📍 Rua Olímpio Klafke, 635<br>
-                    Bairro Mata do Jacinto<br>
-                    Campo Grande - MS</p>
-                    <p style="margin: 15px 0 0 0;">📞 <a href="tel:+5567991310665">(67) 99131-0665</a></p>
+                    <div style="background: var(--light-gray); padding: 25px; border-radius: 10px;">
+                        <h3 style="font-size: 1.3rem; color: var(--primary-color); margin-bottom: 10px;">❓ O gás é certificado?</h3>
+                        <p style="line-height: 1.8;">Sim! Todos os nossos botijões são certificados pela ANP (Agência Nacional do Petróleo). Segurança e qualidade garantidas.</p>
+                    </div>
                 </div>
-                
-                <h2>Horário de Atendimento</h2>
-                <p>Estamos prontos para atender você e entregar gás de cozinha em sua casa!</p>
-                <ul style="line-height: 2;">
-                    <li><strong>Segunda a Sábado:</strong> Das 7h às 19h</li>
-                    <li><strong>Domingos:</strong> Consulte disponibilidade pelo WhatsApp</li>
-                </ul>
-                
-                <div class="cta-box">
-                    <h3>🚚 Entrega em Todos os Bairros</h3>
-                    <p>Atendemos toda Campo Grande - MS com rapidez e segurança. Faça seu pedido agora!</p>
-                    <a href="pedir-gas-em-campo-grande.html" class="btn btn-primary">Como Pedir Gás</a>
-                </div>
-                
             </div>
         </div>
     </section>
@@ -128,44 +214,33 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Gás Campo Grande</h3>
-                    <p>Fornecimento de gás de cozinha em Campo Grande - MS desde 2010.</p>
+                    <p>Sua distribuidora de confiança em Campo Grande - MS</p>
                 </div>
-                
                 <div class="footer-section">
                     <h3>Contato</h3>
-                    <ul>
-                        <li>📍 Rua Olímpio Klafke, 635</li>
-                        <li>Mata do Jacinto - Campo Grande - MS</li>
-                        <li>📞 (67) 99131-0665</li>
-                    </ul>
+                    <p>📞 (67) 99131-0665</p>
+                    <p>⏰ Seg-Dom: 7h às 22h</p>
                 </div>
-                
                 <div class="footer-section">
-                    <h3>Produtos</h3>
-                    <ul>
-                        <li><a href="botijao-p13-em-campo-grande.html">Botijão P13</a></li>
-                        <li><a href="gas-p20-industrial-em-campo-grande.html">Botijão P20</a></li>
-                        <li><a href="gas-p45-em-campo-grande.html">Botijão P45</a></li>
-                    </ul>
+                    <h3>Endereço</h3>
+                    <p>Rua Olímpio Klafke, 635</p>
+                    <p>Bairro Mata do Jacinto</p>
+                    <p>Campo Grande - MS</p>
                 </div>
-                
                 <div class="footer-section">
-                    <h3>Links Úteis</h3>
-                    <ul>
-                        <li><a href="gas-de-cozinha-em-campo-grande-ms.html">Gás de Cozinha</a></li>
-                        <li><a href="pedir-gas-em-campo-grande.html">Como Pedir</a></li>
-                        <li><a href="entrega-de-gas-hoje-em-campo-grande.html">Entrega Hoje</a></li>
-                    </ul>
+                    <h3>Links Rápidos</h3>
+                    <a href="gas-de-cozinha-em-campo-grande-ms.html">Sobre Nós</a>
+                    <a href="pedir-gas-em-campo-grande.html">Como Pedir</a>
+                    <a href="entrega-de-gas-hoje-em-campo-grande.html">Entrega Rápida</a>
                 </div>
             </div>
-            
             <div class="footer-bottom">
-                <p>&copy; 2026 Gás Campo Grande - Gás de Cozinha em Campo Grande - MS</p>
+                <p>&copy; 2025 Gás Campo Grande. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
+    <a href="https://wa.me/5567991310665" class="whatsapp-float" target="_blank">💬</a>
     <script src="js/script.js"></script>
-    
 </body>
 </html>
