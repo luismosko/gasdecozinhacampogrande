@@ -184,7 +184,7 @@ function initContactForm() {
             const mensagem = form.querySelector('[name="mensagem"]').value;
             
             // Monta mensagem para WhatsApp
-            const whatsappMessage = `*Novo Pedido de Gás*\n\nNome: ${nome}\nTelefone: ${telefone}\nBairro: ${bairro}\nMensagem: ${mensagem}`;
+            const whatsappMessage = `*Novo Pedido de Gás*\\n\\nNome: ${nome}\\nTelefone: ${telefone}\\nBairro: ${bairro}\\nMensagem: ${mensagem}`;
             
             // Abre WhatsApp
             const message = encodeURIComponent(whatsappMessage);
@@ -201,24 +201,6 @@ function initContactForm() {
 }
 
 // ============================================
-// DETECTA LOCALIZAÇÃO (OPCIONAL)
-// ============================================
-function detectUserLocation() {
-    if ('geolocation' in navigator) {
-        // Apenas salva no localStorage para uso futuro
-        navigator.geolocation.getCurrentPosition(
-            position => {
-                localStorage.setItem('userLat', position.coords.latitude);
-                localStorage.setItem('userLng', position.coords.longitude);
-            },
-            error => {
-                console.log('Localização não disponível');
-            }
-        );
-    }
-}
-
-// ============================================
 // INICIALIZAÇÃO
 // ============================================
 document.addEventListener('DOMContentLoaded', function() {
@@ -229,7 +211,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initStickyHeader();
     initBairroSearch();
     initContactForm();
-    detectUserLocation();
     
     console.log('✅ Gás Campo Grande - Site carregado com sucesso!');
 });
