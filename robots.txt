@@ -1,0 +1,34 @@
+# Robots.txt para Gás Campo Grande
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://gasdecozinhacampogrande.pages.dev/sitemap.xml
+Sitemap: https://gasdecozinhacampogrande.com.br/sitemap.xml
+
+# Páginas principais
+Allow: /index.html
+Allow: /gas-de-cozinha-em-campo-grande-ms.html
+Allow: /pedir-gas-em-campo-grande.html
+Allow: /entrega-de-gas-hoje-em-campo-grande.html
+Allow: /gas-perto-de-mim-em-campo-grande.html
+
+# Produtos
+Allow: /botijao-p13-em-campo-grande.html
+Allow: /gas-p20-industrial-em-campo-grande.html
+Allow: /gas-p45-em-campo-grande.html
+
+# Contato
+Allow: /contato.html
+
+# Assets
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.webp
+
+# Crawl-delay
+Crawl-delay: 1
