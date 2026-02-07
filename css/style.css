@@ -83,14 +83,15 @@ header {
 }
 
 .contact-info a {
-    color: var(--white);
+    color: #FFFFFF;
     display: flex;
     align-items: center;
     gap: 5px;
+    font-weight: 600;
 }
 
 .contact-info a:hover {
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .header-main {
