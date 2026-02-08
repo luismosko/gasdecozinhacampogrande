@@ -228,33 +228,254 @@
         </div>
     </section>
 
-    <!-- Bairros Atendidos -->
-    <section class="bairros" id="bairros">
-        <div class="container">
-            <div class="section-title">
-                <h2>Entregamos em Todos os Bairros</h2>
-                <p>Cobertura completa em Campo Grande - MS</p>
-            </div>
-            
-            <input type="text" 
-                   id="bairro-search" 
-                   placeholder="🔍 Buscar seu bairro..." 
-                   style="width: 100%; max-width: 500px; padding: 15px; margin: 20px auto; display: block; border: 2px solid #ddd; border-radius: 8px; font-size: 16px;">
-            
-            <div class="bairros-grid">
-                <a href="gas-de-cozinha-no-aero-rancho.html" class="bairro-link">Aero Rancho</a>
-                <a href="gas-de-cozinha-no-centro.html" class="bairro-link">Centro</a>
-                <a href="gas-de-cozinha-no-jardim-dos-estados.html" class="bairro-link">Jardim dos Estados</a>
-                <a href="gas-de-cozinha-no-tiradentes.html" class="bairro-link">Tiradentes</a>
-                <a href="gas-de-cozinha-na-vila-nasser.html" class="bairro-link">Vila Nasser</a>
-                <!-- Adicionar mais bairros conforme necessário -->
-            </div>
-            
-            <div style="text-align: center; margin-top: 30px;">
-                <p>Não encontrou seu bairro? <a href="contato.html" style="color: var(--primary-color); font-weight: 600;">Entre em contato conosco!</a></p>
-            </div>
+
+
+
+
+
+
+    
+
+<!-- SEÇÃO DE BAIRROS COMPLETA  -->
+
+<section class="bairros" id="bairros">
+    <div class="container">
+        <div class="section-title">
+            <h2>Entregamos em Todos os Bairros</h2>
+            <p>Cobertura completa em Campo Grande - MS</p>
         </div>
-    </section>
+        
+        <!-- Campo de busca -->
+        <div class="bairros-search">
+            <input type="text" 
+                   id="busca-bairro" 
+                   placeholder="🔍 Buscar seu bairro..." 
+                   onkeyup="filtrarBairros()">
+        </div>
+        
+        <!-- Grid de bairros (4 colunas) -->
+        <div class="bairros-grid-completo" id="lista-bairros">
+            <!-- A -->
+            <a href="gas-de-cozinha-no-aero-rancho.html" class="bairro-link">Aero Rancho</a>
+            <a href="gas-de-cozinha-no-alves-pereira.html" class="bairro-link">Alves Pereira</a>
+            <a href="gas-de-cozinha-no-amambai.html" class="bairro-link">Amambaí</a>
+            
+            <!-- B -->
+            <a href="gas-de-cozinha-no-batistao.html" class="bairro-link">Batistão</a>
+            <a href="gas-de-cozinha-no-boa-esperanca.html" class="bairro-link">Boa Esperança</a>
+            <a href="gas-de-cozinha-no-bom-pastor.html" class="bairro-link">Bom Pastor</a>
+            <a href="gas-de-cozinha-no-buriti.html" class="bairro-link">Buriti</a>
+            
+            <!-- C -->
+            <a href="gas-de-cozinha-no-cabreuva.html" class="bairro-link">Cabreúva</a>
+            <a href="gas-de-cozinha-no-caioba.html" class="bairro-link">Caiobá</a>
+            <a href="gas-de-cozinha-no-caranda-bosque.html" class="bairro-link">Carandá Bosque</a>
+            <a href="gas-de-cozinha-no-centro.html" class="bairro-link">Centro</a>
+            <a href="gas-de-cozinha-no-centro-oeste.html" class="bairro-link">Centro Oeste</a>
+            <a href="gas-de-cozinha-no-chacara-cachoeira.html" class="bairro-link">Chácara Cachoeira</a>
+            <a href="gas-de-cozinha-no-chacara-dos-poderes.html" class="bairro-link">Chácara dos Poderes</a>
+            <a href="gas-de-cozinha-no-cidade-morena.html" class="bairro-link">Cidade Morena</a>
+            <a href="gas-de-cozinha-no-coophatrabalho.html" class="bairro-link">Coophatrabalho</a>
+            <a href="gas-de-cozinha-no-coophavila-ii.html" class="bairro-link">Coophavila II</a>
+            <a href="gas-de-cozinha-no-coronel-antonino.html" class="bairro-link">Coronel Antonino</a>
+            <a href="gas-de-cozinha-no-cruzeiro.html" class="bairro-link">Cruzeiro</a>
+            
+            <!-- D -->
+            <a href="gas-de-cozinha-no-danubio-azul.html" class="bairro-link">Danúbio Azul</a>
+            <a href="gas-de-cozinha-no-dom-antonio-barbosa.html" class="bairro-link">Dom Antônio Barbosa</a>
+            
+            <!-- E -->
+            <a href="gas-de-cozinha-no-estrela-do-sul.html" class="bairro-link">Estrela do Sul</a>
+            
+            <!-- G -->
+            <a href="gas-de-cozinha-no-guanandi.html" class="bairro-link">Guanandi</a>
+            
+            <!-- I -->
+            <a href="gas-de-cozinha-no-indubrasil.html" class="bairro-link">Indubrasil</a>
+            
+            <!-- J -->
+            <a href="gas-de-cozinha-no-jardim-aeroporto.html" class="bairro-link">Jardim Aeroporto</a>
+            <a href="gas-de-cozinha-no-jardim-aero-rancho.html" class="bairro-link">Jardim Aero Rancho</a>
+            <a href="gas-de-cozinha-no-jardim-agua-boa.html" class="bairro-link">Jardim Água Boa</a>
+            <a href="gas-de-cozinha-no-jardim-anache.html" class="bairro-link">Jardim Anache</a>
+            <a href="gas-de-cozinha-no-jardim-autonomista.html" class="bairro-link">Jardim Autonomista</a>
+            <a href="gas-de-cozinha-no-jardim-batistao.html" class="bairro-link">Jardim Batistão</a>
+            <a href="gas-de-cozinha-no-jardim-botanico.html" class="bairro-link">Jardim Botânico</a>
+            <a href="gas-de-cozinha-no-jardim-campo-belo.html" class="bairro-link">Jardim Campo Belo</a>
+            <a href="gas-de-cozinha-no-jardim-canguru.html" class="bairro-link">Jardim Canguru</a>
+            <a href="gas-de-cozinha-no-jardim-centenario.html" class="bairro-link">Jardim Centenário</a>
+            <a href="gas-de-cozinha-no-jardim-centro-oeste.html" class="bairro-link">Jardim Centro-Oeste</a>
+            <a href="gas-de-cozinha-no-jardim-colibri.html" class="bairro-link">Jardim Colibri</a>
+            <a href="gas-de-cozinha-no-jardim-columbia.html" class="bairro-link">Jardim Columbia</a>
+            <a href="gas-de-cozinha-no-jardim-dos-estados.html" class="bairro-link">Jardim dos Estados</a>
+            <a href="gas-de-cozinha-no-jardim-ima.html" class="bairro-link">Jardim Imá</a>
+            <a href="gas-de-cozinha-no-jardim-itamaraca.html" class="bairro-link">Jardim Itamaracá</a>
+            <a href="gas-de-cozinha-no-jardim-leblon.html" class="bairro-link">Jardim Leblon</a>
+            <a href="gas-de-cozinha-no-jardim-los-angeles.html" class="bairro-link">Jardim Los Angeles</a>
+            <a href="gas-de-cozinha-no-jardim-montevideu.html" class="bairro-link">Jardim Montividéu</a>
+            <a href="gas-de-cozinha-no-jardim-noroeste.html" class="bairro-link">Jardim Noroeste</a>
+            <a href="gas-de-cozinha-no-jardim-panama.html" class="bairro-link">Jardim Panamá</a>
+            <a href="gas-de-cozinha-no-jardim-paradiso.html" class="bairro-link">Jardim Paradiso</a>
+            <a href="gas-de-cozinha-no-jardim-sao-bento.html" class="bairro-link">Jardim São Bento</a>
+            <a href="gas-de-cozinha-no-jardim-sao-lourenco.html" class="bairro-link">Jardim São Lourenço</a>
+            <a href="gas-de-cozinha-no-jardim-taruma.html" class="bairro-link">Jardim Tarumã</a>
+            <a href="gas-de-cozinha-no-jardim-tv-morena.html" class="bairro-link">Jardim TV Morena</a>
+            <a href="gas-de-cozinha-no-jose-abrao.html" class="bairro-link">José Abrão</a>
+            
+            <!-- L -->
+            <a href="gas-de-cozinha-no-lagoa-dourada.html" class="bairro-link">Lagoa Dourada</a>
+            <a href="gas-de-cozinha-no-los-angeles.html" class="bairro-link">Los Angeles</a>
+            
+            <!-- M -->
+            <a href="gas-de-cozinha-no-mata-do-jacinto.html" class="bairro-link">Mata do Jacinto</a>
+            <a href="gas-de-cozinha-no-monte-castelo.html" class="bairro-link">Monte Castelo</a>
+            <a href="gas-de-cozinha-no-monte-libano.html" class="bairro-link">Monte Líbano</a>
+            <a href="gas-de-cozinha-no-moreninhas.html" class="bairro-link">Moreninhas</a>
+            
+            <!-- N -->
+            <a href="gas-de-cozinha-no-nova-campo-grande.html" class="bairro-link">Nova Campo Grande</a>
+            <a href="gas-de-cozinha-no-nova-lima.html" class="bairro-link">Nova Lima</a>
+            <a href="gas-de-cozinha-no-novo-aeroporto.html" class="bairro-link">Novo Aeroporto</a>
+            <a href="gas-de-cozinha-no-novos-estados.html" class="bairro-link">Novos Estados</a>
+            <a href="gas-de-cozinha-no-nucleo-hab-estrela-sul.html" class="bairro-link">Núcleo Hab. Estrela do Sul</a>
+            
+            <!-- P -->
+            <a href="gas-de-cozinha-no-parati.html" class="bairro-link">Parati</a>
+            <a href="gas-de-cozinha-no-parque-do-lageado.html" class="bairro-link">Parque do Lageado</a>
+            <a href="gas-de-cozinha-no-parque-dos-novos-estados.html" class="bairro-link">Parque dos Novos Estados</a>
+            <a href="gas-de-cozinha-no-parque-res-rita-vieira.html" class="bairro-link">Parque Res. Rita Vieira</a>
+            <a href="gas-de-cozinha-no-pioneiros.html" class="bairro-link">Pioneiros</a>
+            <a href="gas-de-cozinha-no-popular.html" class="bairro-link">Popular</a>
+            
+            <!-- S -->
+            <a href="gas-de-cozinha-no-sao-francisco.html" class="bairro-link">São Francisco</a>
+            <a href="gas-de-cozinha-no-santo-amaro.html" class="bairro-link">Santo Amaro</a>
+            <a href="gas-de-cozinha-no-santo-andre.html" class="bairro-link">Santo André</a>
+            
+            <!-- T -->
+            <a href="gas-de-cozinha-no-taquarussu.html" class="bairro-link">Taquarussu</a>
+            <a href="gas-de-cozinha-no-taveiropolis.html" class="bairro-link">Taveirópolis</a>
+            <a href="gas-de-cozinha-no-tiradentes.html" class="bairro-link">Tiradentes</a>
+            
+            <!-- U -->
+            <a href="gas-de-cozinha-no-universitario.html" class="bairro-link">Universitário</a>
+            
+            <!-- V -->
+            <a href="gas-de-cozinha-no-vida-nova.html" class="bairro-link">Vida Nova</a>
+            <a href="gas-de-cozinha-no-vila-alba.html" class="bairro-link">Vila Alba</a>
+            <a href="gas-de-cozinha-no-vila-bandeirante.html" class="bairro-link">Vila Bandeirante</a>
+            <a href="gas-de-cozinha-no-vila-carlota.html" class="bairro-link">Vila Carlota</a>
+            <a href="gas-de-cozinha-no-vila-carvalho.html" class="bairro-link">Vila Carvalho</a>
+            <a href="gas-de-cozinha-no-vila-celia.html" class="bairro-link">Vila Célia</a>
+            <a href="gas-de-cozinha-na-vila-nasser.html" class="bairro-link">Vila Nasser</a>
+            <a href="gas-de-cozinha-no-vila-progresso.html" class="bairro-link">Vila Progresso</a>
+            <a href="gas-de-cozinha-no-vila-popular.html" class="bairro-link">Vila Popular</a>
+        </div>
+        
+        <p class="bairros-footer">
+            Não encontrou seu bairro? <a href="https://wa.me/5567991310665?text=Olá! Meu bairro não está na lista. Vocês atendem?" target="_blank">Entre em contato conosco!</a>
+        </p>
+    </div>
+</section>
+
+<style>
+/* CSS para a seção de bairros */
+.bairros-search {
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.bairros-search input {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+.bairros-search input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.bairros-grid-completo {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .bairros-grid-completo {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+    }
+}
+
+.bairro-link {
+    display: block;
+    padding: 12px 16px;
+    background: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    text-align: center;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.bairro-link:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.bairros-footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #666;
+}
+
+.bairros-footer a {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+</style>
+
+<script>
+// JavaScript para busca de bairros
+function filtrarBairros() {
+    const input = document.getElementById('busca-bairro');
+    const filtro = input.value.toLowerCase();
+    const grid = document.getElementById('lista-bairros');
+    const links = grid.getElementsByClassName('bairro-link');
+    
+    for (let i = 0; i < links.length; i++) {
+        const texto = links[i].textContent || links[i].innerText;
+        if (texto.toLowerCase().indexOf(filtro) > -1) {
+            links[i].style.display = '';
+        } else {
+            links[i].style.display = 'none';
+        }
+    }
+}
+</script>
+
+
+
+
+
+    
+
+
+
+
+    
 
     <!-- Footer -->
     <footer>
